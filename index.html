@@ -1,0 +1,418 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Masna3ko — Clothing Factory</title>
+<meta name="description" content="Masna3ko Egyptian clothing factory manufacturing high-quality garments for brands.">
+
+<style>
+
+:root{
+--accent:#ffffff;
+--muted:#9ca3af;
+--bg:#000000;
+--card:#111111;
+}
+
+*{box-sizing:border-box}
+
+body{
+font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+margin:0;
+background:var(--bg);
+color:white;
+overflow-x:hidden;
+}
+
+/* Galaxy background */
+
+#galaxyCanvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+background:radial-gradient(circle at 50% 50%, #020202, #000000);
+}
+
+/* Content */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:28px;
+position:relative;
+z-index:1;
+}
+
+header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px 0;
+}
+
+.brand{
+display:flex;
+gap:12px;
+align-items:center;
+}
+
+.logo img{
+height:60px;
+}
+
+nav a{
+color:var(--muted);
+text-decoration:none;
+margin-left:18px;
+font-weight:600;
+}
+
+nav a.active{
+color:white;
+}
+
+h1{
+font-size:34px;
+margin-top:20px;
+}
+
+h2{
+font-size:24px;
+margin-top:50px;
+border-left:4px solid white;
+padding-left:10px;
+}
+
+.products{
+margin-top:24px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.card{
+background:var(--card);
+padding:14px;
+border-radius:14px;
+transition:transform .2s ease;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+.card img{
+width:100%;
+height:auto;
+object-fit:contain;
+border-radius:10px;
+background:#111;
+}
+
+.card h3{
+margin:10px 0 6px;
+font-size:18px;
+}
+
+.tags{
+color:var(--muted);
+font-size:13px;
+}
+
+footer{
+margin-top:60px;
+padding:24px 0;
+color:var(--muted);
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+@media(max-width:960px){
+.products{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:640px){
+.products{grid-template-columns:1fr}
+.container{padding:16px}
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="galaxyCanvas"></canvas>
+
+<div class="container">
+
+<header>
+
+<div class="brand">
+<div class="logo">
+<img src="499694729_17887065912261256_3931638300933591528_n.jpg" alt="Masna3ko Logo">
+</div>
+
+<div>
+<div style="font-weight:800">MASNA3KO</div>
+<div style="font-size:12px;color:var(--muted)">
+
+</div>
+</div>
+</div>
+
+<nav>
+<a href="home.html">Home</a>
+<a href="products.html" class="active">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<h1>WHO ARE WE!!!</h1>
+
+<p style="color:var(--muted);font-size:16px;margin-bottom:20px">
+Masna3ko is an Egyptian clothing factory specializing in high-quality apparel for men and women. We combine modern manufacturing with expert craftsmanship to produce stylish, durable garments including casual wear, sportswear, uniforms, and custom designs. At Masna3ko, quality, precision, and reliability are at the heart of everything we create.
+
+</p>
+<p style="color:var(--muted);font-size:16px;margin-bottom:20px">
+و (Masna3ko) هو مصنع ملابس مصري متخصص في إنتاج ملابس عالية الجودة للرجال والنساء. نجمع بين أحدث تقنيات التصنيع والخبرة في صناعة الملابس لنقدم تصاميم أنيقة ومتينة تشمل الملابس الكاجوال والرياضية والزي الرسمي والتصاميم حسب الطلب. في مصنعكو، الجودة والدقة والموثوقية هي أساس كل ما نصنعه.
+</p>
+
+<h1>WHAT WE DO !!!</h1>
+
+<h2>T-SHIRTS</h2>
+
+<div class="products">
+
+<article class="card">
+<img src="Screenshot 2026-03-07 220828.png">
+<h3>Summer T-Shirt M&S </h3>
+<div class="tags">Premium cotton • Custom manufacturing</div>
+</article>
+
+<article class="card">
+<img src="BUNKER.png">
+<h3>Summer T-Shirt BUNKER </h3>
+<div class="tags">Premium cotton • Custom manufacturing</div>
+</article>
+
+<article class="card">
+<img src="LONGSLEEVE.png">
+<h3>Long SLEEVE </h3>
+<div class="tags">Oversized fit • Premium cotton</div>
+</article>
+
+</div>
+
+
+<h2>Hoodies</h2>
+
+<div class="products">
+
+<article class="card">
+<img src="images/hoodie1.jpg">
+<h3>BASIC HOODIE</h3>
+<div class="tags">Heavyweight cotton • Relaxed fit</div>
+</article>
+
+<article class="card">
+<img src="images/hoodie2.jpg">
+<h3>ZIP HOODIE</h3>
+<div class="tags">Soft fleece • Front zipper</div>
+</article>
+
+</div>
+
+
+<h2>T-Shirts</h2>
+
+<div class="products">
+
+<article class="card">
+<img src="images/tshirt1.jpg">
+<h3>BASIC REGULAR FIT T-SHIRT</h3>
+<div class="tags">Organic cotton • Regular fit</div>
+</article>
+
+<article class="card">
+<img src="images/tshirt2.jpg">
+<h3>LONG SLEEVE STRIPED T-SHIRT</h3>
+<div class="tags">100% cotton • Custom printing available</div>
+</article>
+
+</div>
+
+
+<h2>Pants</h2>
+
+<div class="products">
+
+<article class="card">
+<img src="images/pants1.jpg">
+<h3>LOOSE FIT JEANS</h3>
+<div class="tags">Denim • Custom production</div>
+</article>
+
+<article class="card">
+<img src="images/pants2.jpg">
+<h3>BALLOON FIT TROUSERS</h3>
+<div class="tags">Lightweight cotton</div>
+</article>
+
+</div>
+
+
+<h2>Accessories</h2>
+
+<div class="products">
+
+<article class="card">
+<img src="images/cap.jpg">
+<h3>EMBROIDERED CAPS</h3>
+<div class="tags">Custom embroidery available</div>
+</article>
+
+</div>
+
+
+<h2>Footwear</h2>
+
+<div class="products">
+
+<article class="card">
+<img src="images/shoe1.jpg">
+<h3>BASIC TRAINERS</h3>
+<div class="tags">Comfort sole • Unisex</div>
+</article>
+
+<article class="card">
+<img src="images/shoe2.jpg">
+<h3>DOUBLE STRAP SANDALS</h3>
+<div class="tags">Leather straps</div>
+</article>
+
+</div>
+
+
+<footer>
+
+<div style="display:flex;justify-content:space-between;flex-wrap:wrap">
+
+<div style="font-weight:700;color:white">Masna3ko</div>
+
+<div style="font-size:14px">
+© Masna3ko 2026 · Egyptian Clothing Factory
+</div>
+
+</div>
+
+</footer>
+
+</div>
+
+
+<script>
+
+/* Galaxy background animation */
+
+const canvas=document.getElementById('galaxyCanvas')
+const ctx=canvas.getContext('2d')
+
+let w,h
+let particles=[]
+const numParticles=120
+
+function resize(){
+w=canvas.width=window.innerWidth
+h=canvas.height=window.innerHeight
+}
+
+window.addEventListener('resize',resize)
+resize()
+
+class Particle{
+
+constructor(){
+this.reset()
+}
+
+reset(){
+this.x=Math.random()*w
+this.y=Math.random()*h
+this.size=Math.random()*2+0.5
+this.speedX=(Math.random()-0.5)*0.4
+this.speedY=(Math.random()-0.5)*0.4
+this.alpha=Math.random()*0.8+0.2
+this.color=`hsl(${Math.random()*360},80%,70%)`
+}
+
+update(){
+this.x+=this.speedX
+this.y+=this.speedY
+if(this.x<0||this.x>w||this.y<0||this.y>h)this.reset()
+}
+
+draw(){
+ctx.beginPath()
+ctx.fillStyle=this.color
+ctx.globalAlpha=this.alpha
+ctx.arc(this.x,this.y,this.size,0,Math.PI*2)
+ctx.fill()
+}
+
+}
+
+for(let i=0;i<numParticles;i++){
+particles.push(new Particle())
+}
+
+let mouse={x:0,y:0}
+
+window.addEventListener('mousemove',e=>{
+mouse.x=e.clientX
+mouse.y=e.clientY
+})
+
+function animate(){
+
+ctx.clearRect(0,0,w,h)
+
+for(let p of particles){
+
+p.update()
+p.draw()
+
+const dx=p.x-mouse.x
+const dy=p.y-mouse.y
+const dist=Math.sqrt(dx*dx+dy*dy)
+
+if(dist<120){
+
+ctx.beginPath()
+ctx.strokeStyle=p.color
+ctx.globalAlpha=0.2
+ctx.moveTo(p.x,p.y)
+ctx.lineTo(mouse.x,mouse.y)
+ctx.stroke()
+
+}
+
+}
+
+ctx.globalAlpha=1
+requestAnimationFrame(animate)
+
+}
+
+animate()
+
+</script>
+
+</body>
+</html>
+```
